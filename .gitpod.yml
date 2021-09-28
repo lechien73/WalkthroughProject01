@@ -1,5 +1,9 @@
 tasks:
   - init: pip install -r requirements.txt
+  - name: Startup
+    command: echo Exporting ${GITPOD_REPO_ROOT#*"ace/"}
+    env:
+      REPONAME: ${GITPOD_REPO_ROOT#*"ace/"}
 
 vscode:
   extensions:
